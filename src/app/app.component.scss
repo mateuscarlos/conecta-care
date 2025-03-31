@@ -1,0 +1,46 @@
+:host {
+  display: grid;
+  grid-template-rows: 60px 1fr 60px; /* Altere para valores fixos para header/footer */
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  gap: 0; /* Remover qualquer gap padrão */
+}
+
+app-header {
+  grid-area: header;
+  width: 100%;
+  z-index: 10; /* Garante que o header apareça acima dos outros elementos */
+  background-color: #fff; /* Adicione uma cor de fundo para visualização */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adicione uma sombra para separação visual */
+}
+
+app-sidebar {
+  grid-area: sidebar;
+  height: 100%;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Permite rolagem se o conteúdo for muito extenso */
+}
+
+.content {
+  grid-area: content;
+  padding: 16px;
+  overflow: auto;
+  background-color: #fff; /* Adicione uma cor de fundo para visualização */
+}
+
+app-footer {
+  grid-area: footer;
+  width: 100%;
+  background-color: #fff; /* Adicione uma cor de fundo para visualização */
+  z-index: 10; /* Garante que o footer apareça acima dos outros elementos */
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1); /* Adicione uma sombra para separação visual */
+}

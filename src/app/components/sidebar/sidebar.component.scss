@@ -1,0 +1,13 @@
+.sidenav-container {
+  height: calc(100vh - 128px); /* Ajusta a altura para considerar o cabeçalho e o rodapé */
+  display: flex;
+}
+
+mat-sidenav {
+  width: 250px; /* Define a largura do menu lateral */
+}
+
+mat-sidenav-content {
+  flex: 1; /* Garante que o conteúdo ocupe o restante do espaço */
+  padding: 16px; /* Adiciona espaçamento interno */
+}
